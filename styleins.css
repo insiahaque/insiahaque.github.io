@@ -1,0 +1,87 @@
+html {
+    background-color:black;
+    font-family: "", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 0.9;
+    color: white;
+    cursor: url("images/cursorheart.png"), auto;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+#title {
+    padding-left: 10%;
+    padding-top: 5%;
+    width: 120px;
+    display: block;
+    text-align-last: justify;
+    justify-content: space-between;
+}
+
+#name {
+    color: #888888;
+}
+
+#name:hover {
+    color:white;
+}
+
+#name:hover~ #ilnyc{
+    color: #888888;
+}
+
+#name:hover~ #ilnyc> #dingbat{
+    animation: spin 2s infinite;
+}
+
+#dingbat {
+    font-family: "oswald", sans-serif;
+    font-size: 33px;
+    display: inline-block;
+    transform-origin: 50% 64%;
+    animation: spin 10s infinite;
+}
+
+#dingbat:hover {
+    animation: spin 1s infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    /* 25% { transform: rotate(180deg); }
+    50% { transform: rotate(-180deg); }
+    75% { transform: rotate(90deg); } */
+    100% { transform: rotate(360deg); }
+  }
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff2c2c;
+}
+
+.content {
+    margin-left: 25%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#meow {
+    margin-left: 35%;
+    margin-top: 20%;
+}
