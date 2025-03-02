@@ -1,0 +1,183 @@
+html {
+    background-color: #00181b;
+}
+
+.images {
+    position: relative;
+    padding-left: 10%;
+    padding-top: 5%;
+    margin-right: 70px;
+    display: block;
+    text-align-last: justify;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.buttons {
+    position: absolute;
+    top: 10%;
+    right: 7%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    transition: top 0.3s ease;
+}
+
+.layered {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+}
+
+.floor {
+    z-index: 1000;
+}
+
+.lightsoff {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 999;
+}
+
+.bath {
+    opacity: 0;
+}
+
+.mirror {
+    opacity: 0;
+}
+
+.toilet {
+    opacity: 0;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.button1 {
+    width: 10vw;
+    height: auto;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.toggle-checkbox1 {
+    display: none;
+}
+
+.toggle-checkbox1:checked ~ .buttons .button1 {
+    filter: brightness(50%);
+    transform: scale(0.95);
+}
+
+.toggle-checkbox1:checked ~ .images .lightsoff {
+    opacity: 1;
+}
+
+.buttonm {
+    width: 10vw;
+    height: auto;
+    display: block;
+    filter: hue-rotate(240deg);
+    transition: filter 0.3s ease;
+}
+
+.toggle-checkboxm {
+    display: none;
+}
+
+.toggle-checkboxm:checked ~ .buttons .buttonm {
+    filter: hue-rotate(240deg) brightness(50%);
+    transform: scale(0.95)
+}
+
+.toggle-checkboxm:checked ~ .images .mirror {
+    animation: fade 2s ease forwards;
+}
+
+.buttont {
+    width: 10vw;
+    height: auto;
+    display: block;
+    filter: hue-rotate(215deg);
+    transition: filter 0.3s ease;
+}
+
+.toggle-checkboxt {
+    display: none;
+}
+
+.toggle-checkboxt:checked ~ .buttons .buttont {
+    filter: hue-rotate(215deg) brightness(50%);
+    transform: scale(0.95)
+}
+
+.toggle-checkboxt:checked ~ .images .toilet {
+    animation: fade 2s ease forwards;
+}
+
+.buttonb {
+    width: 10vw;
+    height: auto;
+    display: block;
+    filter: hue-rotate(180deg);
+    transition: filter 0.3s ease;
+}
+
+.toggle-checkboxb {
+    display: none;
+}
+
+.toggle-checkboxb:checked ~ .buttons .buttonb {
+    filter: hue-rotate(180deg) brightness(50%);
+    transform: scale(0.95)
+}
+
+.toggle-checkboxb:checked ~ .images .bath {
+    animation: fade 2s ease forwards;
+}
+
+@media (max-width: 850px) {
+    .images {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .layered {
+        width: 100%;
+    }
+
+    .buttons {
+        position: relative;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .button1, .buttonm, .buttont, .buttonb {
+        width: 80px;
+    }
+}
+
+@media (min-width: 851px) {
+    .buttons {
+        flex-direction: column;
+        position: absolute;
+        top: 10%;
+        right: 7%;
+        gap: 20px;
+    }
+
+    .button1, .buttonm, .buttont, .buttonb {
+        width: 10vw;
+    }
+}
