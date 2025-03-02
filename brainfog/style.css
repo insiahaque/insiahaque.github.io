@@ -22,6 +22,7 @@ html {
     flex-direction: column;
     align-items: center; 
     transition: top 0.3s ease;
+    z-index: 1000;
 }
 
 .layered {
@@ -32,13 +33,13 @@ html {
 }
 
 .floor {
-    z-index: 1000;
+    z-index: 999;
 }
 
 .lightsoff {
     opacity: 0;
     transition: opacity 0.5s ease;
-    z-index: 999;
+    z-index: 998;
 }
 
 .bath {
