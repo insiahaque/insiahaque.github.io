@@ -1,0 +1,43 @@
+html {
+    background-color: #ffffff;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 14;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+}
+
+.title {
+    font-size: 28;
+}
+
+.buttons {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: black;
+    color: white;
+}
+
+.draggable {
+    position: absolute;
+    cursor: grab;
+    top: 100px;
+    left: 100px;
+}
