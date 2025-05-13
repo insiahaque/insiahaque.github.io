@@ -1,6 +1,6 @@
 body, html {
     margin: 0;
-    height: 300vh; /* Enough scroll room for 3 layers */
+    height: 300vh;
     overflow-x: hidden;
     background: black;
   }
@@ -14,7 +14,6 @@ body, html {
     overflow: hidden;
   }
   
-  /* Layer positioning & base style */
   .layer {
     position: absolute;
     top: 50%;
@@ -27,12 +26,10 @@ body, html {
     pointer-events: none;
   }
   
-  /* Stack order (title at front, brain at back) */
   .layer:nth-child(1) { z-index: 3; }
   .layer:nth-child(2) { z-index: 2; }
   .layer:nth-child(3) { z-index: 1; }
   
-  /* Emoji container styles */
   #emoji-container {
     position: fixed;
     top: 50%;
@@ -109,10 +106,10 @@ body, html {
   
   .emoji span {
     position: absolute;
-    bottom: 120%; /* above the emoji */
+    bottom: 120%;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(255, 119, 170, 0.9); /* soft pink tint */
+    background: rgba(255, 119, 170, 0.9);
     color: white;
     padding: 0.3rem 0.6rem;
     border-radius: 0.5rem;
