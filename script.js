@@ -1,7 +1,6 @@
 const layers = document.querySelectorAll('.layer');
 const emojiContainer = document.getElementById('emoji-container');
 
-// Divide scroll into thirds for each layer
 const totalScroll = document.body.scrollHeight - window.innerHeight;
 const scrollRanges = [
   [0.0, 0.33],
@@ -24,13 +23,12 @@ window.addEventListener('scroll', () => {
       layer.style.opacity = 0;
       layer.style.transform = 'translate(-50%, -50%) scale(2)';
     } else {
-      const scale = 1 + progress; // from 1 to 2
+      const scale = 1 + progress;
       layer.style.opacity = 1 - progress;
       layer.style.transform = `translate(-50%, -50%) scale(${scale})`;
     }
   });
 
-  // Reveal emoji container after final image is zoomed
   const brainLayerIndex = layers.length - 1;
 const [, brainEnd] = scrollRanges[brainLayerIndex];
 
@@ -41,8 +39,8 @@ if (scrollFraction >= brainEnd) {
 }
 
 document.querySelectorAll('#emoji-container a').forEach(link => {
-    const delay = Math.random() * 3; // 0 to 3 seconds
-    const duration = 5 + Math.random() * 3; // 5 to 8 seconds
+    const delay = Math.random() * 3;
+    const duration = 5 + Math.random() * 3;
     link.style.animationDelay = `${delay}s`;
     link.style.animationDuration = `${duration}s`;
   });
